@@ -1,0 +1,75 @@
+<app-header></app-header>
+<app-sign-up *ngIf="signup_activated"></app-sign-up>
+<div class="container " *ngIf="!authenticated && !signup_activated">
+    <div class="row">
+      <div class="col">
+        <div>
+          <img class="logo" src="assets/logo.jpg">
+        </div>
+        <div>
+            <img class="company" src="assets/company.png">
+          </div>
+      </div>
+      <div class="col ">
+
+        <div class="container">
+          <div class=" row sign_in_options">
+              
+           <h6 class="text"> Sign in with</h6>
+           <div class="icons">
+                <i class='facebook fab fa-facebook'></i>
+                <i class='twitter fab fa-twitter'></i>
+                <i class='linkedin fab fa-linkedin'></i>
+            </div>
+
+            <b class="or">or</b>
+
+          </div> 
+
+          <div class="signin-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label class="labell">Email Address</mat-label>
+              <input  [(ngModel)]="email" class="email"  type="text" id="email" matInput placeholder="someone@example.com" value="" name="email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width " appearance="fill">
+                <mat-label class="labell">Password</mat-label>
+                <input class="password" [(ngModel)]="password" id="password" matInput type="password" name="password" value="">
+            </mat-form-field>
+            <section class="example-section">
+                <mat-checkbox class="remember-me">Remember me</mat-checkbox>
+            </section>
+            <section>
+                <button (click)="authenticateUser()" class="login-button" mat-raised-button color="primary">Login</button>
+                <button (click)="signUpUser()" class="signup-button" mat-raised-button >Sign Up</button>
+
+            </section>
+      
+         
+          
+        </div>
+
+      </div>
+    </div>
+    <!-- <div [hidden]="!authenticated"> User is authenticated</div> -->
+
+
+</div>
+
+</div>
+
+
+<div *ngIf="selectedMenuItem=='blogs'">
+  <app-blogs ></app-blogs>
+</div>
+<div *ngIf="selectedMenuItem=='about'">
+  <app-about></app-about>
+</div>
+
+<div *ngIf="selectedMenuItem=='contact'">
+  <app-contact></app-contact>
+</div>
+<div *ngIf="selectedMenuItem=='create blogs'">
+  <app-createblogs (sendBlogItemEvent)="fetchBlogItem($event)"></app-createblogs>
+</div>
+<app-footer></app-footer>
+

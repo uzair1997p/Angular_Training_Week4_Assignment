@@ -1,0 +1,58 @@
+
+<div class="container sign-up_page"> 
+
+    <div class="row sign_up_details">
+        <div class="col-lg-4">
+            <div>
+                <div class="title">
+                    Blog-Site.
+                </div>  
+                <div class="details">
+                    A central hub where people can create blogs,edit blogs,delete blogs and can work together
+                </div>
+                <div>
+                    <img class="company" src="assets/sign_up_image.PNG">  
+                </div>
+            </div>
+        </div>
+        <div class="col offset-2">
+            <h6 class="free_text"> Start for Free </h6>
+            <h6 class="text"> Sign Up to Blog Site </h6>
+            <div class="already_text">
+                Already a member? 
+                    <a (click)="routeLogin()" class="login_link" href="h">   Login</a>
+            </div>
+            <div class="signup-form">
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label class="labell">Name</mat-label>
+                    <input   class="name" [(ngModel)]="userObject.name"  type="text" id="name" matInput  value="" name="name">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label class="labell">Email Address</mat-label>
+                <input   class="email" [(ngModel)]="userObject.email"  type="text" id="email" matInput placeholder="someone@example.com" value="" name="email">
+                </mat-form-field>
+                <mat-form-field class="example-full-width " appearance="fill">
+                    <mat-label class="labell">Password</mat-label>
+                    <input class="password" [(ngModel)]="userObject.password"  id="password" matInput type="password" name="password" value="">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width " appearance="fill">
+                    <mat-label class="labell">Confirm Password</mat-label>
+                    <input class="cpassword" [(ngModel)]="confirmPassword"  id="cpassword" matInput type="password" name="cpassword" value="">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width " appearance="fill">
+                    <mat-label class="labell">Designation</mat-label>
+                    <input class="designation" [(ngModel)]="userObject.designation"  id="designation" matInput type="text" name="designation" value="">
+                </mat-form-field>
+                <section>
+                    <button (click)="registerUser()" class="register-button" mat-raised-button color="primary">Register</button>
+        
+                </section>
+            </div>
+        </div>
+    </div>
+   
+</div>

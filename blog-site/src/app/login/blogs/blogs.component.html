@@ -1,0 +1,45 @@
+<div class="container blogs">
+  <div class="searchfield"> 
+     <mat-form-field class="searchfield" appearance="fill">
+        <mat-label>Search Title</mat-label>
+        <input matInput type="text"  [(ngModel)]="searchTitle" >
+      <button  *ngIf="searchTitle"  matSuffix mat-icon-button aria-label="Clear" (click)="searchTitle=''">
+        <mat-icon>close</mat-icon>
+      </button>
+      </mat-form-field>
+  </div>
+
+
+    <div class="row">
+        <div *ngFor="let blog of filteredblogs |searchFilter:searchTitle; let i=index" class="col-lg-4 blog_column">
+            <mat-card class="blogs" >
+                <mat-card-header>
+                    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                    <mat-card-title>{{blog.title}}</mat-card-title>
+                    <mat-card-subtitle>{{blog.author}} </mat-card-subtitle>
+                  </mat-card-header>
+                  <img class="blog_image"  mat-card-image  src="{{'../../../../../assets/'+blog.imageUrl}}" alt="Photo of a weekend already over">
+                  <mat-card-content>
+                    <p [ngClass]="{'limitTextHeight':blogs[i].isReadMore}">
+                       {{blog.description}}
+                    </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button (click)="showText(i)" mat-button>
+                      {{ blogs[i].isReadMore ? 'Read More': 'Read Less' }}
+                    </button>
+                    <button (click)="openDialog(i)" *ngIf="blog.createdby==loggedinusername" mat-button>
+                      Edit
+                    </button>
+                    <button (click)="deleteBlog(i)" *ngIf="blog.createdby==loggedinusername" mat-button>
+                      Delete
+                    </button>
+                  </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    
+
+    
+</div>

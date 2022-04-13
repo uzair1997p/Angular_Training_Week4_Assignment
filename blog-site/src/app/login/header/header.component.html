@@ -1,0 +1,28 @@
+
+<mat-toolbar color="primary" class="ml-auto">
+    
+    <img *ngIf="imageUrl!=''" class="avatar" src="{{'../../../assets/'+imageUrl}}">
+    <span *ngIf="name!=''"  class="username">{{name}}</span>
+    <button mat-icon-button style="background-color:#3f51b5 ;"> Home </button>
+    <span  class="navbar"></span>
+    <div class="nav_remaining ">
+        <button  mat-button (click)="selectMenuItem($event)" value="blogs" class="blogs" id="blogs" name="blogs" >
+            Blogs
+        </button>
+        <button mat-button *ngIf="name==''"  class="login" (click)="selectMenuItem($event)" value="login" id="login" name="login" aria-label="Example icon-button with heart icon">
+            Login
+        </button>
+        <button mat-button *ngIf="name!=''"  (click)="selectMenuItem($event)" value="logout" id="logout" name="logout">
+            Logout
+        </button>
+        <button mat-button *ngIf="name!=''"   (click)="selectMenuItem($event)" value="createblogs" id="createblogs" name="createblogs">
+            Create Blogs
+        </button>
+        <button mat-button (click)="selectMenuItem($event)" value="about" id="about" name="about">
+            About
+        </button>
+        <button mat-button (click)="selectMenuItem($event)" value="contact" id="contact" name="contact" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            Contact
+        </button>        
+    </div>
+</mat-toolbar>

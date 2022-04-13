@@ -1,0 +1,26 @@
+<div *ngIf="formtoedit" class="header">
+    <h2>Edit Blog</h2>
+    
+</div>
+
+<div *ngIf="formtoedit" class="container">
+    <form action="/action_page.php">
+      <label class="label"  for="fname">Title</label>
+      <input type="text" id="title" name="title" [(ngModel)]="blog_object.title" placeholder="Title">
+      <br>
+  
+      <label class="label" for="author">Author</label>
+      <input type="text" [(ngModel)]="blog_object.author" id="author" name="author" placeholder="Author">
+      <br>
+  
+      <br>
+  
+      <label class="label" for="description">Description</label>
+      <textarea id="description" [(ngModel)]="blog_object.description" name="description" placeholder="description" style="height:200px"></textarea>
+        
+
+      <input type="file"  id="file" (change)="handleFileInput($event)">
+
+      <input class="edit_button" type="submit" (click)="onNoClick()" value="Update Blog">
+    </form>
+  </div>

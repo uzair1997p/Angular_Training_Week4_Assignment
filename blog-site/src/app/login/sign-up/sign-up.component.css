@@ -1,0 +1,55 @@
+.title{
+    font-size: 35px;
+    color: darkblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.details{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.free_text{
+    opacity: 65%;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+.email{
+    height: 35px;
+}
+.name{
+    height: 35px;
+}
+.password{
+  height: 35px;
+}
+.cpassword{
+    height: 35px;
+}
+.designation{
+    height: 35px;
+}
+.signup-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 200px;
+    width: 100%;
+    margin-top: 25px;
+   
+  }
+  .example-full-width {
+    width: 70%;
+  }
+  .register-button{
+      margin-top: 20px;
+  }
+  .text{
+    font-size: 35px;
+    display: inline;
+    
+   }
+   .already_text{
+       margin-top: 15px;
+       font-size: 15px;
+   }
+   .sign-up_page{
+       margin-top: 50px;
+   }

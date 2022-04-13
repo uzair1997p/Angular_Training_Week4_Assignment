@@ -1,0 +1,39 @@
+.navbar{
+    justify-content: left;
+    flex: 1 1;
+    margin-top: 20px;
+
+}
+.avatar{
+    width: 80px;
+    height: 50px;
+}
+.username{
+    font-size: 15px;
+}
+span{
+    padding-right: 1rem;
+}
+a{
+    color: white;
+}
+.nav_remaining {
+    
+    /* justify-content: right;
+    float: right; */
+  }
+  .blogs{
+      margin-right: 10px;
+  }
+  .logout{
+      margin-right: 10px;
+  }
+  .createblogs{
+    margin-right: 10px;
+    }
+  .login{
+    margin-right: 10px;
+}
+  .about{
+    margin-right: 10px;
+  }

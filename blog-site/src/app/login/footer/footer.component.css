@@ -1,0 +1,21 @@
+.footer{
+    background-color: #000066;
+    color: white;
+    padding-top: 25px;
+     margin-top: 30px; 
+    padding-bottom: 25px;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.copyright{
+    margin-left: 40px;
+    font-size: 15px;
+}
+.remaining_items{
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
